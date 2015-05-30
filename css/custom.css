@@ -1,0 +1,30 @@
+body {
+    padding-top: .5rem;
+}
+
+p.center {
+    text-align: center;
+}
+
+p.indented {
+    text-indent: 20px;
+}
+
+.introduction {
+    background-color: #3F51B5;
+    color: white;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    padding: .5rem 1rem;
+  
+}
+
+md-content {overflow-x: hidden;}
+/*.docrow {
+    background-color = blue;
+    padding-top=20rem;
+    padding-bottom=20rem;
+    margin-bottom = 20rem;
+    margin-top=20rem;
+}
+*/
