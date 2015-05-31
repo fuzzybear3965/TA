@@ -25,7 +25,7 @@ app.controller('ece106Controller', ['$scope', PostsController = function($scope)
                 "url": "docs/Week1.pdf"
             },
             "Post 2": {
-                "title": "Week 2: Gauss's Law Homework Questions",
+                "title": "Week 2: Continuous Charge Homework Questions",
                 "url": "docs/HomeworkQuestions.pdf"
             }
         };
