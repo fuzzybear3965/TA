@@ -2,3 +2,14 @@
 *.aux
 *.toc
 *.pdfsync
+*.synctex
+*.bbl
+*.tcp
+*.db
+*.blg
+*.tps
+*.dvi
+*.pdf
+*.ps
+*~
+.*.sw?
