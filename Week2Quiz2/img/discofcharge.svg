@@ -15,7 +15,7 @@
    viewBox="0 0 250 250"
    id="svg2"
    version="1.1"
-   inkscape:version="0.91 r"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="discofcharge.svg">
   <defs
      id="defs4">
@@ -294,16 +294,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.8284271"
-     inkscape:cx="105.37234"
+     inkscape:cx="53.223214"
      inkscape:cy="119.91521"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
-     inkscape:window-width="1855"
-     inkscape:window-height="1056"
-     inkscape:window-x="65"
-     inkscape:window-y="24"
+     inkscape:window-width="1920"
+     inkscape:window-height="1058"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      showguides="false" />
   <metadata
@@ -314,7 +314,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -335,7 +335,7 @@
          x="-327.3407"
          y="1345.9344" /></text>
     <ellipse
-       style="fill:#ffd42a;stroke:#ffd42a;stroke-width:4.69999981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#ffd42a;stroke:#ffd42a;stroke-width:4.69999981;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;fill-opacity:1"
        id="path4163-9"
        cx="114.90485"
        cy="921.34637"
