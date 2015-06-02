@@ -28,6 +28,11 @@ app.controller('ece106Controller', ['$scope', PostsController = function($scope)
                 "title": "Week 2: Gauss's Law Homework Questions",
                 "url": "docs/HomeworkQuestions.pdf"
             }
+            
+            "Post 3": {
+                "title": "Week 2: Quiz 2 - Rings and Discs of Charge",
+                "url": "docs/RingsAndDiscsOfCharge.pdf"
+            }
         };
     }]
 );

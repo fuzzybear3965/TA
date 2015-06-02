@@ -77,3 +77,8 @@ p.indented {
 }
 
 md-content {overflow-x: hidden;}
+
+md-content .vert-center {
+    display: table-cell;
+    vertical-align: middle;
+}
