@@ -215,12 +215,18 @@
         If we break the disc up into a bunch of
         rectangular areas, $da$, like is done with Cartesian coordinates
         we will have a difficult time integrating over our disc (see
-        %\ref{fig:patches.eps}
-        . Our bounds will have to be over the area of the disc which
+        \ref{fig:cartvspolar.eps}. Our bounds will have to be over the 
+				area of the disc which
         require that we express the limits of our integral in terms of
         the equation of the circle. I don't really want to deal with $y
         = \pm \sqrt{1-x^2}$ in my limits.
 
+				\begin{figure}%
+				\centering
+				\includegraphics[width=.65\columnwidth]{./img/cartvspolar.eps}%
+				\caption{Differential area element in Cartesian coordinates vs Polar Coordinates}%
+				\label{fig:cartvspolar.eps}%
+				\end{figure}
 
         Instead, let's consider the patches of area to be little arcs of
         some finite thickness. See \ref{fig:doc.eps} for a decent visual
@@ -247,7 +253,7 @@
         convincing evidence that maybe this is a good expression to use
         for the differential area element when we're dealing with
         circles. Now, I'm going to immediately write the integral we're
-        going to solve since the approach is very similar to what we'va
+        going to solve since the approach is very similar to what we've
         already done.
 
         \[ \vec{E}(z) = \int_0^{2\pi} \int_0^R \frac{k dq' (z \hat{z}-
@@ -261,7 +267,7 @@
         sweep over all the charge. Now, we just have to right $dq'$ in
         terms of $r'$ and $\theta'$ and we're good. But, $dq' = \sigma
         \diff a' = \sigma r' dr' \diff \theta'$, from the earlier
-        discusson. The integral now reads:
+        discussion. The integral now reads:
 
         \[ \vec{E}(z) = \int_0^{2\pi} \int_0^R \frac{k \sigma r' dr'
         \diff \theta' (z \hat{z}-
@@ -274,7 +280,7 @@
        0 to $2\pi$).
 
         \[ \vec{E}(z) = \int_0^{2\pi} \int_0^R \frac{k \sigma r' dr'
-        \diff \theta' (z \hat{z} }{(z^2+r'^2)^{1.5}}
+        \diff \theta' z \hat{z} }{(z^2+r'^2)^{1.5}}
         \]
 
         Now, the only $\theta'$ in my integral is the $\diff \theta'$.
@@ -282,7 +288,7 @@
         easily. 
 
         \[ \vec{E}(z) = 2\pi \int_0^R \frac{k \sigma r' dr'
-        (z \hat{z} }{(z^2+r'^2)^{1.5}}
+        z \hat{z} }{(z^2+r'^2)^{1.5}}
         \]
 
         I then realize that this is the same integral as the one I was
