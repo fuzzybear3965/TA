@@ -29,9 +29,16 @@
         over all the infinitesimal point charges to find the net
         electric field $\vec{E} = \int \diff \vec{E}$. 
 
+        \begin{figure}[t]
+            \centering    
+            \includegraphics{./img/ringofcharge.eps}
+            \caption{Ring of charge centered along z-axis}
+            \label{fig:roc.eps}
+        \end{figure}
+
         The key to starting to write this integral is to realize that
         each infinitesimal check of charge $\diff q'$ is like a little point
-        charge located at position $r'$ (see figure %\ref{fig:geom.eps})
+        charge located at position $r'$ (see figure \ref{fig:roc.eps})
         and, as such, the electric field contribution due a particular
         chunk of charge, $\diff q'$, looks like:
 
@@ -84,7 +91,8 @@
         Now, can we simplify this expression at all before we integrate?
         Yes! We know that $\vec{r} = z \hat{z}$ since we are only
         solving for the electric field along the z-axis. We also know
-        that $|\vec{\scriptr}|$ is $\sqrt{R^2+z^2}$ (look at %\ref{)
+        that $|\vec{\scriptr}|$ is $\sqrt{R^2+z^2}$ (look at
+        \ref{fig:roc.eps})
         Performing these substitutions yields:
 
         \[ \diff \vec{E}(z) = \frac{k \lambda R \diff
@@ -133,8 +141,16 @@
         different radii to obtain the electric field along the z-axis
         due to a charged disc. Thus, I'm going to chop the electric
         field for the disc up into a bunch of rings.
-    
+   
         \[ \diff \vec{E}(z) = \frac{k dQ}{(R^2+z^2)^{1.5}} z\hat{z} \]
+
+        \begin{figure}[t]
+            \begin{center}
+                \includegraphics{./img/discofcharge.eps}
+            \end{center}
+            \caption{Disc of charge broken up into rings}
+            \label{fig:doc.eps}
+        \end{figure}
 
         What is dQ? Well, dQ is me treating each ring as a chunk of
         charge that generates a little portion of the total electric
@@ -142,12 +158,15 @@
         need to give these rings some infinitesimal width. The disc will
         be formed of a bunch of rings of infinitesimal width. A ring of
         infinitesimal width and of radius $R'$ will have an amount of
-        charge equal to $2 \pi R' dR' \sigma$. What is $\sigma$? It's
-        the surface charge density. Since we're considering areas of
-        charge, now, we need to consider area charge densities. Think
-        about whether a relationship can be drawn between $\lambda$ and
-        $\sigma$. Let's try to write down the integral now that we know
-        what $\diff Q$ is.
+        charge equal to $2 \pi R' dR' \sigma$ (see \ref{fig:doc.eps} and
+        allow $\diff \theta'$ to be $2 \pi$ - you might argue that this
+        is not an infinitesimal quantity\dots well it turns out that
+        this doesn't matter. It's still the area of that ring: $2\pi r'
+        dr'$). What is $\sigma$? It's the surface charge density. Since
+        we're considering areas of charge, now, we need to consider area
+        charge densities. Think about whether a relationship can be
+        drawn between $\lambda$ and $\sigma$. Let's try to write down
+        the integral now that we know what $\diff Q$ is.
 
         \[ \vec{E}(z) = \int_0^{R_{disc}} \diff \vec{E}(z) =
         \int_0^{R_{disc}}\frac{k 2 \pi R' dR' \sigma}{(R'^2+z^2)^{1.5}}
@@ -202,16 +221,17 @@
         the equation of the circle. I don't really want to deal with $y
         = \pm \sqrt{1-x^2}$ in my limits.
 
+
         Instead, let's consider the patches of area to be little arcs of
-        some finite thickness. See %\ref{fig:arcs.png%. 
-        Now, it's easy to break up the area of our circle into little
-        chunks. We will talk about a little chunk of area $da = (R \diff
-        \theta)(\diff R)$. That is, the little chunk will have an
-        arclength that is $R \diff \theta$ long and $\diff R$ wide. That
-        determines the area of this patch. You can convince yourself,
-        easily, that this is a great way to think about areas when it
-        comes to dealing with problems with circles in them. Let's
-        integrate the area of a circle with these coordinates:
+        some finite thickness. See \ref{fig:doc.eps} for a decent visual
+        explanation.  Now, it's easy to break up the area of our circle
+        into little chunks. We will talk about a little chunk of area
+        $da = (R \diff \theta)(\diff R)$. That is, the little chunk will
+        have an arclength that is $R \diff \theta$ long and $\diff R$
+        wide. That determines the area of this patch. You can convince
+        yourself, easily, that this is a great way to think about areas
+        when it comes to dealing with problems with circles in them.
+        Let's integrate the area of a circle with these coordinates:
 
         \begin{align}
             A &= \int_0^R da \nonumber \\
