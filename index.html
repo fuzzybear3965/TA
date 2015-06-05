@@ -90,8 +90,8 @@ change the name should you so desire.
 
 <!-- Documents -->
 <md-content ng-controller="ece106Controller as ece106ctrl">
-    <div layout="row" layout-align="left" ng-repeat="doc in docs" class="docrow">
-        <md-content flex="40" offset="20" class="document">
+    <div layout="row" layout-align="left" ng-repeat="doc in docs" class="docrow"> 
+        <md-content flex="60" offset="20" class="document">
         <form method="get" action={{doc.url}}>
             <md-button class="docstitle md-raised md-primary" ng-click="openTab(doc)" type="submit"> 
                 <md-tooltip md-direction="right"> Download</md-tooltip>
@@ -100,7 +100,7 @@ change the name should you so desire.
         </form>
         </md-content>
         <md-content flex="20">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<!--        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="jrinehar@uwaterloo.ca">
             <input type="hidden" name="lc" value="CA">
@@ -108,6 +108,7 @@ change the name should you so desire.
             <input type="hidden" name="currency_code" value="CAD">
             <input type="image" src="./img/paypal.png" border="0" name="submit" width="117px" height="30px">
         </form>
+        -->
         </md-content>
     </div>
 </md-content>
