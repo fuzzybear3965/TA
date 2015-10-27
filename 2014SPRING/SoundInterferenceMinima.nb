@@ -1,0 +1,101 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      2747,         91]
+NotebookOptionsPosition[      2432,         75]
+NotebookOutlinePosition[      2775,         90]
+CellTagsIndexPosition[      2732,         87]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"points", " ", "=", " ", 
+   RowBox[{"{", 
+    RowBox[{".5", ",", "1.5", ",", "2.5", ",", "3.5", ",", "4.5"}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"w", "=", "1.5"}], ";", 
+  RowBox[{"l", "=", ".4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"length", "[", "n_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"w", "^", "2"}], "-", 
+      RowBox[{
+       RowBox[{"n", "^", "2"}], "*", 
+       RowBox[{"l", "^", "2"}]}]}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"2", "*", "n", "*", "l"}], ")"}]}]}], " ", 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListPlot", "[", 
+  RowBox[{"Transpose", "[", 
+   RowBox[{"{", 
+    RowBox[{"points", ",", 
+     RowBox[{"length", "[", "points", "]"}]}], "}"}], "]"}], 
+  "]"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.5999122258925653`*^9, 3.599912387335799*^9}, {
+  3.59991242686106*^9, 3.5999124295162115`*^9}, {3.5999124817381988`*^9, 
+  3.5999127368067875`*^9}, {3.5999127700586896`*^9, 3.599912775081977*^9}, {
+  3.599914047912779*^9, 3.599914071852148*^9}, {3.599914140283062*^9, 
+  3.5999142057858086`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {RGBColor[0.24720000000000014`, 0.24, 0.6], 
+    PointBox[{{0.5, 5.525}, {1.5, 1.5749999999999997`}, {2.5, 
+     0.6249999999999999}, {3.5, 0.10357142857142841`}, {
+     4.5, -0.2750000000000002}}]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0.},
+  ImageSize->{1065., Automatic},
+  Method->{},
+  PlotRange->{{0, 4.5}, {-0.2750000000000002, 5.525}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{0.09, 0.09}, {0.11600000000000002`, 
+   0.11600000000000002`}}]], "Output",
+ CellChangeTimes->{{3.5999141671215973`*^9, 3.59991421332624*^9}}]
+}, Open  ]]
+},
+WindowSize->{1904, 985},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (January 25, 2013)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 1175, 32, 112, "Input"],
+Cell[1757, 56, 659, 16, 704, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
