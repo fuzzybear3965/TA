@@ -2,7 +2,7 @@
 \usepackage[]{amsmath}
 \begin{document}
 IPA and two large Kimtechs.
-\section{Lectures 1 and 2}
+\section*{Lectures 1 and 2: PHYS242 Information}
 
 \[
         \begin{array}{|c|c|c|}
@@ -16,7 +16,7 @@ IPA and two large Kimtechs.
 \end{array}
 \]
 
-\section{Lecture 3}
+\section*{Lecture 3: Introducing the Vector Potential}
 
 \[ \vec{A} = \frac{\mu_0}{4\pi} \int\limits_{current} \frac{\vec{J}}{r}
 dV \]
@@ -26,21 +26,88 @@ dV \]
         \vec{r}_{QP}}{r_{QP}^3}
 \]
 
-\section{Lecture 4}
+\section*{Lecture 4: Vector Potential as Electrostatics}
 Solving for the vector potential can be thought of as solving for the
 electrostatic potential where the current is replaced with a volume
 charge density : $ c^2 \rho \rightarrow J$.
 
-\section{Lecture 5}
+\section*{Lecture 5: Relativity of Fields}
 Relativity of motion determines that B fields change into E fields and
 vice-versa. Charge value is independent of reference frame but volume
 (change density) is not.
 
-\section{Lecture 6}
+\section*{Lecture 6: Deriving the Weak Formulation}
 Electrostatic energy can be written as 
 \[ 
         U_e = \int\limits_{\text{all space}} \rho \phi dV -
-    \frac{1}{2}\epsilon_0\int\limits_{\text(all space}} ||\nabla \phi||^2 dV
+        \frac{1}{2}\epsilon_0\int\limits_{\text{all space}} ||\nabla \phi||^2 dV
 \]
 
+It can be shown that the solution for the right $\phi$ is determined by
+minimizing $U_e$ over all $\phi$ (given some $\rho$). 
+
+\section*{Lecture 7: Using the Weak Formulation}
+In this lecture we derive an approximation of the capacitance between a
+cylindrical conductor and another concentrically spaced conductor. Study the
+capacitance example. Try to extend it to third order.
+
+\section*{Lecture 8: Mutual Inductance}
+Conducting loops adjacent to one another will exhibit mutual inductance between
+both of them. 
+
+\begin{align*}
+    M_{21} &= \frac{\Phi_{21}}{I_1} = \frac{\mu_0}{4\pi} \oint_{\gamma_2}
+    \left(\oint_{\gamma_1} \frac{\vec{t}_1}{r}~dl_1\right) \cdot \vec{t}_2~dl_2
+    &= \frac{\Phi_{21}}{I_1} = \frac{\mu_0}{4\pi} \oint_{\gamma_2}
+    \oint_{\gamma_1} \frac{\vec{t}_1 \cdot \vec{t}_2}{r}~dl_1 ~dl_2
+\end{align*}
+
+\section*{Lecture 9: Self-Inductance of a Loop using Expansions}
+This lecture is particularly involved with regards to the calculations involved.
+I would not recommend spending much time on it to study for the midterm.
+
+\section*{Lecture 10: Electrostatic Forces and their Relationship to Work}
+The particulars of how to calculate the electric force on a conductor is
+supplied, in general. That is:
+
+\[ 
+        F_r = - \frac{\partial U_e}{\partial r}\Big|_q = \frac{\partial
+        U_e}{\partial r}\Big|_\phi
+\]
+
+The special case of the electric force acting on a condenser is also considered.
+
+\section*{Lecture 11: Work and Forces with Currents}
+
+The force acting on a current-carrying wire in a magnetic field is considered.
+\[ 
+        \vec{F} = \int_{\tau} \left( \vec{J} \times \vec{B} \right) dV
+\]
+
+This expression was used to calculate the force between straight wires carrying
+current.
+
+The energy required to move a conductor was considered.
+
+\section*{Lecture 12: Multiple Expansions of Electrostatic Potential}
+
+The multipole expansion of a potential was defined in terms of Legendre
+polynomials.
+
+The torque on a dipole in an electrostatic field is considered.
+
+\section*{Lecture 13: Dipoles}
+The potential energy of a dipole interacting with an electric field is
+considered. 
+
+The electrostatic potential due to a configuration of dipoles is considered.
+
+Finally, the surface charge density, $\sigma$, and volume charge density,
+$\rho$, of charge given by a distribution of dipoles is given.
+
+Namely: $ \sigma = \vec{P}\cdot \vec{n} $ and $ \rho = -\nabla \cdot \vec{P} $ 
+
+\section*{Lecture 14: Multipole Expansion of Vector Potential}
+Multipole expansion of the vector potential is considered. This is worth
+reviewing.
 \end{document}
