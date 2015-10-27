@@ -1,0 +1,9 @@
+*.aux
+*.bib
+*.log
+*.tps
+*.synctex
+*.tcp
+*.blg
+*.bbl
+*.out
