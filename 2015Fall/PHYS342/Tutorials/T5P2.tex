@@ -1,0 +1,117 @@
+\section*{Exercise 5.2}
+\subsection*{Problem Statement}
+\hfill
+\begin{center}
+    \fbox{
+\begin{minipage}{.85\textwidth}
+    A cylindrical bar magnetized along its axis is free to rotate about its
+    center. It is placed a distance a = \SI{2}{\centi\meter} from a wire
+    carrying a constant current (cross sectional area =
+    \SI{2}{\square\milli\meter}, length = \SI{3}{\centi\meter}). What is the stable equilibrium position of the
+    rod? How large is the magnetic force acting on the rod in this position if
+    the current in the wire is I = \SI{10}{\ampere} and the magnetization
+    (magnetic moment per unit volume) of the rod is M =
+    \SI{300}{\ampere\per\meter}?
+\end{minipage}
+}
+\end{center}
+
+\subsection*{Solution}
+
+We will approximate the rod as an ideal magnetic dipole. Then, we will calculate
+all of the variables referring to the position of the center of the bar and
+associating with it the overall dipole moment.
+
+\[ 
+    \vec{m} = \vec{M} V = \vec{M} \cdot L \cdot S 
+\]
+
+Having set the distance from the wire, the equilibrium position of the rod is
+obtained by canceling the mechanical torque $\tau$ determined by the
+interaction between the magnetic moment of the rod and the field B produced by
+the current flowing in the wire. So,
+
+\[ 
+    \tau = \vec{m}\times \vec{B} 
+\]
+
+By the symmetry of the problem and the solenoidal property of $\vec{B}$ the
+magnetic field will be tangent to the circumference orthogonal to the wire and
+concentric with it. In order that $\tau = 0$ we have to cancel the angle between
+$\vec{B}$ and $\vec{m}$. In order that the equilibrium position is stable then
+it needs to be a minimum of the potential energy of the system. We can write
+this as:
+
+\[ 
+    E = - \vec{m} \cdot \vec{B}
+\]
+
+The minimum for this happens when $\vec{m}$ is the same direction as $\vec{B}$.
+Using Ampere's law, we can write:
+
+\[ 
+    B = \frac{\mu_0 I }{2 \pi r} 
+\]
+
+Substituting our expressions for $B$ and $m$ allows us to write:
+
+\[ 
+    E = -M S L \frac{\mu_0 I }{2 \pi r} 
+\]
+
+To calculate the force, we need to take the derivative of this expression at
+$r=a$.
+
+\[ 
+    F = \frac{d E}{d r}\big|_{r=a} = MSL \frac{\mu_0 I}{2 \pi a^2}
+\]
+
+The direction is given by that which joins the wire and the rod. Plugging in
+numbers yields \SI{9e-8}{\newton}.
+
+To get the exact solution we need to consider separately the infinitesimal
+elements of the rod and integrate along its length. Consider the rod as
+arranged in the figure, in the equilibrium position. Given the form of B that we
+obtained earlier, r is now:
+
+\[
+    r = \frac{a}{\cos\theta}
+\]
+
+The energy of a single element is:
+
+\[ 
+    e = - \vec{m}\cdot \vec{B} = -\vec{M} dV \cdot \vec{B} = - \vec{M} \cdot
+    \vec{B} S dx
+\]
+
+If we take into account the angle between the dipole and the field:
+
+\[ 
+    e = -M B \cos\theta S dx 
+\]
+
+But since $dx = d(a \tan\theta) = \frac{r}{\cos \theta}d \theta$ we have:
+
+\[ 
+    e = - \frac{M S \mu_0 I}{2 \pi} d \theta
+\]
+
+Integrating now over the whole rod will give us the total energy:
+
+\[ 
+    E = \frac{M S \mu_0 I}{\pi} \alpha 
+\]
+
+where $\alpha = \arctan \frac{L}{2 a}$.
+
+To get the force we need to take the derivative of E with respect to r and
+evaluate it at $r=a$. Doing this yields:
+
+
+\[ 
+    F = \frac{\partial E}{\partial r}\big|_{r=a} = \frac{M S L \mu_0 I}{2 \pi}
+    \frac{1}{a^2 + (L/2)^2}
+\]
+
+Plugging in numbers yields: $F = \SI{5.76e-8}{\newton}$.

@@ -1,0 +1,47 @@
+\section*{Exercise 5.2}
+\subsection*{Problem Statement}
+\hfill
+\begin{center}
+    \fbox{
+\begin{minipage}{.85\textwidth}
+An electromagnet is made of an iron ring-shaped torus of which a slice is
+removed so as to obtain a region in air in which is produced a field that will
+be used. Around the torus a wire is wrapped N times and carries current i. If
+$l_1$ is the distance between the pole pieces and the average length of the air
+gap is $l_2$ then determine the value of the magnetic field in the air. (Use the
+fact that the radius of the coils is small compared to the radius of the torus).
+\end{minipage}
+}
+\end{center}
+
+\subsection*{Solution}
+
+Calling $H_1$ the field strength in the air and $H_2$ the field strength in the
+iron we have from Ampere's law that:
+
+\[ 
+    \oint H \cdot dl = I  = H_1 l_1 + H_2 l_2  = N i
+\]
+
+If the radius of the coils is small compared to that of the torus then we can
+assume that $H_1$ and $H_2$ represent the value of H at any point, respectively,
+in the air and in the iron. To obtain $H_1$ we need another relationship between
+$H_1$ and $H_2$. This comes from the continuity of $\vec{B}$.
+
+\[
+    \vec{B}_1 = \vec{B}_2
+\]
+
+Thus, we can write:
+
+\[ 
+    \mu_0 H_1 = \mu_0 \mu_2 H_2 
+\]
+
+Finally:
+
+\[ 
+    H_1 = \frac{N i}{l_1 + l_2/\mu_2} 
+\]
+
+This is the value of the $H$ field in the air gap.
