@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.aux
 *.bib
 *.log
@@ -9,3 +10,4 @@
 *.out
 *.fdb_latexmk
 *.fls
+*.*sw?
