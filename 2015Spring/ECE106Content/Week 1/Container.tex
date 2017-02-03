@@ -5,7 +5,7 @@
 \usepackage{graphicx} % Required to insert images
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage{amsmath,amsthm,amsxtra}
-\usepackage{physymb}
+\usepackage{calligra,physics}
 
 % Margins
 \topmargin=-0.45in
@@ -13,7 +13,7 @@
 \oddsidemargin=0in
 \textwidth=6.5in
 \textheight=9.0in
-\headsep=0.25in 
+\headsep=0.25in
 \setlength{\parindent}{10ex}
 \linespread{1.1} % Line spacing
 
@@ -117,8 +117,8 @@
 \newcommand{\Lrw}{\Longrightarrow}
 \newcommand{\refeq}[1]{(\ref{#1})}
 %\newcommand{\abs}[1]{\left| #1\right|}
-\newcommand{\ket}[1]{|#1\rangle}
-\newcommand{\bra}[1]{\langle #1| }
+%\newcommand{\ket}[1]{|#1\rangle}
+%\newcommand{\bra}[1]{\langle #1| }
 \newcommand{\intas}{\int\limits_{all\;space}}
 \newcommand{\intsradial}[3]{\int\limits_{#1}^{#2} #3 r^2 \mathrm{d} r}
 \newcommand{\intspolar}[3]{\int\limits_{#1}^{#2} #3 sin(\theta) \mathrm{d} \theta}
@@ -129,6 +129,10 @@
 \newcommand{\intavcart}[1]{\int \limits_{all\; space} #1 \, \mathrm{d} x \mathrm{d} y \mathrm{d} z}
 \newcommand{\bracket}[2]{\langle#1|#2\rangle }
 \newcommand*{\myalign}[2]{\multicolumn{1}{#1}{#2}}
+
+\DeclareMathAlphabet{\mathcalligra}{T1}{calligra}{m}{n}
+\DeclareFontShape{T1}{calligra}{m}{n}{<->s*[2.2]callig15}{}
+\newcommand{\scriptr}{\mathcalligra{r}\,}
 
 % New definition of square root:
 % it renames \sqrt as \oldsqrt
@@ -198,7 +202,7 @@
     numberstyle={\tiny \color{black}},% size of the numbers
     numbersep=9pt, % this defines how far the numbers are from the text
     emph=[1]{for,end,break},emphstyle=[1]\color{red}, %some words to emphasise
-    %emph=[2]{word1,word2}, emphstyle=[2]{style},    
+    %emph=[2]{word1,word2}, emphstyle=[2]{style},
 }
 
 %----------------------------------------------------------------
@@ -217,7 +221,7 @@
 \vspace{0.5in}\large{{\hmwkClassInstructor}}
 \vspace{3in}
 }
-\author{\textbf{\hmwkAuthorName}\\ 
+\author{\textbf{\hmwkAuthorName}\\
 }
 
 \date{May 20, 2015} % Insert date here if you want it to appear below your nam
@@ -238,7 +242,7 @@
 ---------------------
 %\input{Problem2}
 %\setcounter{equation}{0}
-%--------------------- 
+%---------------------
 %\input{Problem3}
 %\setcounter{equation}{0}
 %----------------------
