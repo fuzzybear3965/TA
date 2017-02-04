@@ -1,0 +1,108 @@
+\documentclass{article}
+\usepackage[]{amsmath}
+\usepackage[]{tikz}
+\usepackage[]{braket}
+\newcommand{\me}{\mathrm{e}}
+\usetikzlibrary{calc}
+
+\newcommand{\tikzmark}[1]{\tikz[overlay,remember picture] \node (#1) {};}
+
+\begin{document}
+
+\begin{align*}
+   \left[ A,B \right] &= AB-BA \\
+                      &= - (BA - AB) \\
+                      &= - \left[ B,A \right]
+\end{align*}
+\begin{align*}
+   \left[ A+B,C \right] &= (A + B)C - C(B+A) \\
+                        &= AC + BC - CB + CA \\
+                        &= [A,C]+[B,C]
+\end{align*}
+\begin{align*}
+   \left[ A,BC \right] &= ABC - BCA \\
+                       &= ABC + ( BAC - BAC ) - BCA \\
+                       &= \left[ A,B\right]C + B\left[A,C \right]
+\end{align*}
+\begin{align*}
+   &\left[ A,\left[ B,C \right] \right] + \left[ B,\left[ C,A \right] \right] +
+   \left[ C,\left[ A,B \right] \right]
+   =  \\
+   &\left( A \left( BC - CB \right) - \left( BC - CB \right) A \right)
+   + \left( B \left( CA - AC \right) - \left( CA-AC \right)B \right)
+   + \left( C \left( AB - BA \right) - \left( AB-BA \right)C \right) \\
+   &= A\tikzmark{abc1}BC -
+   A\tikzmark{acb1}CB -
+   B\tikzmark{bca1}CA +
+   C\tikzmark{cba1}BA +
+   BC\tikzmark{bca2}A -
+   B\tikzmark{bac1}AC -
+   C\tikzmark{cab1}AB +
+   AC\tikzmark{acb2}B +
+   CA\tikzmark{cab2}B -
+   CB\tikzmark{cba2}A -
+   AB\tikzmark{abc2}C +
+   BA\tikzmark{bac2}C
+   \begin{tikzpicture}[overlay, remember picture, out=315, in=225]
+      \draw[->,shorten >= 3pt, shorten <= 3pt,red,thick,distance=1.25cm] (abc1.center) to (abc2.center);
+      \draw[->,shorten >= 3pt, shorten <= 3pt,green,thick,distance=.75cm] (bca1.center) to (bca2.center);
+      \draw[->,shorten >= 3pt, shorten <= 3pt,blue,thick,distance=1cm] (cba1.center) to (cba2.center);
+      \draw[->,shorten >= 3pt, shorten <= 3pt,purple,thick,distance=.75cm] (cab1.center) to (cab2.center);
+      \draw[->,shorten >= 3pt, shorten <= 3pt,orange,thick,distance=1cm] (acb1.center) to (acb2.center);
+      \draw[->,shorten >= 3pt, shorten <= 3pt,black,thick,distance=1cm] (bac1.center) to (bac2.center);
+   \end{tikzpicture} \\
+   &= 0
+\end{align*}
+
+\begin{align*}
+   \Bra{\lambda} N \Ket{\lambda}
+   &= \Bra{\lambda} a^{\dagger} a \Ket{\lambda} \\
+   &= \Bra{\lambda} \lambda^{*} \lambda \Ket{\lambda} \\
+   &= \left| \lambda \right|^{2} \Braket{\lambda|\lambda}
+\end{align*}
+
+\begin{align*}
+   \Braket{x(t)}
+   &= \Braket{\lambda | C \left( \hat{a}(0)\me^{-i \omega t} +
+\hat{a}^{\dagger}(0)\me^{i \omega t} \right) | \lambda} \\
+&= \Braket{\lambda | C \hat{a}(0)\me^{-i \omega t} | \lambda} +
+\Braket{\lambda | C \hat{a}^\dagger(0)\me^{i \omega t} | \lambda} \\
+&= C\me^{-i \omega t} \Braket{\lambda | \hat{a}(0) | \lambda} +
+C\me^{i \omega t} \Braket{\lambda | \hat{a}^\dagger(0) | \lambda} \\
+&= C\me^{-i \omega t} \lambda \Braket{\lambda | \lambda} +
+C\me^{i \omega t} \Braket{\lambda | \hat{a}^\dagger(0) | \lambda} \\
+\end{align*}
+But,
+\begin{equation}
+   \Braket{\lambda | a | \lambda}^{*} = (\Braket{\lambda | \lambda | \lambda})^{*}
+   = (\lambda \Braket{\lambda | \lambda})^* = \lambda^{*}
+\end{equation}
+\begin{equation}
+   \Braket{\lambda | a | \lambda}^{*} = (\Braket{a^{\dagger}\lambda |
+   \lambda})^{*} = \Braket{\lambda | a^{\dagger} \lambda}
+\end{equation}
+
+So, $ a^{\dagger} \Ket{\lambda} = \lambda^{*} \Ket{\lambda} $
+
+Thus,
+\begin{align*}
+   \Braket{x(t)} &= C \me^{-i \omega t} \lambda
+   + C \me^{i \omega t} \lambda^{*} \\
+   &= 2 C \Re(\lambda \me^{-i \omega t})
+\end{align*}
+
+\begin{align*}
+   \exp(\lambda a^{\dagger})\Ket{0} &= \lambda \Ket{1} + \frac{\lambda^{2}
+   \sqrt{2} \Ket{2}}{2!}
+   + \ldots + \frac{\lambda^{n} \sqrt{n!} \Ket{n}}{n!}
+   \Braket{\lambda|\lambda} \\
+   \Braket{(\exp(\lambda a^{\dagger}))^{\dagger}0|\exp(\lambda a^{\dagger})0 } \\ = \exp(- \left| \lambda \right|^{2})
+   &\left( \lambda \Bra{1} + \sqrt{2}(\lambda^{2}) \Bra{2} + \ldots +
+      \sqrt{n!} \left( \lambda^{n} \right) \Bra{n} \right) \\
+      &\left( \lambda^{*} \Ket{1} + \sqrt{2} (\lambda^{2})^{*} \Ket{2} + \ldots +
+      \sqrt{n!} \left( \lambda^{n} \right)^{*} \Ket{n} \right) \\
+   &= \exp(- \left| \lambda \right|^{2}) \left( \left| \lambda \right|^2 + 2 \left|
+\lambda \right|^{4} + \ldots + n! \left| \lambda \right|^{2n} \right)
+\end{align*}
+
+\end{document}
